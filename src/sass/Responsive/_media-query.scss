@@ -1,0 +1,149 @@
+@use '../abstracts/index' as *;
+
+@media (max-width: 992px){
+    // Header
+    .header{
+        @include flex(row, center, center, 60px);
+        @include position(fixed, 90%, 50%, -50%, -50%, null);
+        width: 70%;
+
+        & .logo{
+            width: 115px;
+            height: 65px;
+        }
+
+        & .menus{
+            transform: translateX(-300%);
+            width: 100vw;
+
+            &.active{
+                transform: translateX(0);
+                animation: menu-bar 1s ease-in-out;
+            }
+
+            & ul{
+                @include flex(row, center, space-around, 40px);
+                padding: 10px 25px;
+
+                & li{
+
+                    &.active{
+                        height: 6vh;
+                        padding: 0 1.3em;
+                    }
+
+                }
+            }
+        }
+    }
+
+    // Header Animation
+    @include menu-animation('horizontal');
+}
+
+@media (max-width: 768px) {
+    // Header
+    .header{
+        width: 90%;
+
+        & .logo{
+            width: 70px;
+        }
+
+        & .menus{
+            width: 80vw;
+            & ul{
+                padding:15px;
+
+                & li{
+
+                    &.active{
+                        height: 4vh;
+                        padding: 0 10px;
+                    }
+
+                }
+            }
+        }
+    }
+
+    // Home
+    .home{
+        & main{
+            margin-left: 0;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    // Header
+    .header{
+        @include flex(column, center, center, 20px);
+        @include position(fixed, 88%, null, null, null, null);
+        width: 100%;
+        bottom: auto;
+
+        & .logo{
+            width: 50px;
+            height: 50px;
+        }
+
+        & .menus{
+            width: 80vw;
+            & ul{
+                padding: 7px 15px;
+
+                & li{
+
+                    &.active{
+                        height: 6vh;
+                        padding: 0 1.1em;
+                    }
+
+                }
+            }
+        }
+    }
+
+    // Home
+    .home{
+        & .blue-ball{
+
+            & div:nth-child(1){
+                filter: opacity(10%);
+                left: 90%;
+            }
+            & div:nth-child(2){
+                filter: opacity(20%);
+                left: 80%;
+            }
+            & div:nth-child(3){
+                filter: opacity(30%);
+                left: 85%;
+            }
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    // Header
+    .header{
+        & .menus{
+            & ul{
+                @include flex(row, center, space-around, 20px);
+                & li{
+                    &.active{
+                        height: 6vh;
+                        padding: 0 .8em;
+                    }
+                }
+            }
+        }
+    }
+
+    // Home
+    .home{
+        padding-top: 15px;
+        align-items:start !important;
+    }
+}

@@ -1,0 +1,49 @@
+@use '../abstracts/index' as *;
+// Font
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&family=Kaushan+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+.home{
+    position: relative;
+    overflow: hidden;
+
+    & .blue-ball{
+        @include position(absolute, 50%, 50%, -50%, -50%, null);
+        width: 100%;
+        z-index: -1;
+
+        & div{
+            @include position(absolute, 50%, 50%, -50%, -50%, null);
+            background: map-get($color, primary);
+            width: 800px;
+            height: 100vh;
+            border-radius: map-get($border-radius, rad-per-c);
+        }
+
+        & div:nth-child(1){
+            filter: opacity(10%);
+            left: 110%;
+        }
+        & div:nth-child(2){
+            filter: opacity(20%);
+            left: 105%;
+        }
+        & div:nth-child(3){
+            filter: opacity(30%);
+            left: 100%;
+        }
+    }
+
+    & main{
+        margin-left: 100px;
+
+        & h1 span{
+            font-family: "Kaushan Script", cursive;
+            letter-spacing: 3px;
+            font-weight: 800;
+            font-size: 1.1em;
+        }
+    }
+
+
+}

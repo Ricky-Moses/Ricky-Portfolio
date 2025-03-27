@@ -1,0 +1,55 @@
+@use './variables' as *;
+
+// button
+@mixin button($py, $px, $bor-rad, $bg-color, $text-color, $fs-bold){
+    padding: $py $px;
+    border: none;
+    border-radius: $bor-rad;
+    background: $bg-color;
+    color: $text-color;
+    transition: all .5s ease-in-out;
+    font-weight: $fs-bold;
+    border: 1px solid $bg-color;
+
+    &:hover{
+        background: $text-color;
+        color: $bg-color;
+        font-weight: $fs-bold;
+    }
+}
+
+// Flex
+@mixin flex($flex-d, $align-i, $jus-con, $gap){
+    display: flex;
+    flex-direction: $flex-d;
+    align-items: $align-i;
+    justify-content: $jus-con;
+    gap: $gap;
+}
+
+// Position
+@mixin position($position, $pt, $pl, $tx, $ty, $pz){
+    position: $position;
+    top: $pt;
+    left: $pl;
+    transform: translate($tx, $ty);
+    z-index: $pz;
+}
+
+// Header animation
+@mixin menu-animation($direction){
+    @keyframes menu-bar {
+        @if $direction == 'vertical'{
+            0%{ transform: translateY(-300%); }
+            60%{ transform: translateY(10%);  }
+            80%{ transform: translateY(-5%); }
+            100%{ transform: translateY(0%); }
+        }
+        @else if $direction == 'horizontal'{
+            0%{ transform: translateX(-300%); }
+            60%{ transform: translateX(10%);  }
+            80%{ transform: translateX(-5%); }
+            100%{ transform: translateX(0%); }
+        }
+    }
+}
