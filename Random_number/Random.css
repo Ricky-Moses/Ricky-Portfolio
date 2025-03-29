@@ -1,0 +1,92 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.game-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+}
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.form {
+    margin-top: 15px;
+}
+
+input[type="number"] {
+    width: 80px;
+    padding: 8px;
+    font-size: 16px;
+    text-align: center;
+}
+
+button {
+    padding: 8px 15px;
+    font-size: 16px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.result-section {
+    margin-top: 15px;
+}
+
+#lastResult {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+#lastResult.success {
+    color: white;
+    background-color: green;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#lastResult.error {
+    color: white;
+    background-color: red;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+#resetGame {
+    margin-top: 15px;
+    background-color: #2ecc71;
+}
+
+#resetGame:hover {
+    background-color: #27ae60;
+}
