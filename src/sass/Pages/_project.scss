@@ -1,0 +1,75 @@
+@use '../abstracts/index' as *;
+
+
+.project{
+    height: fit-content;
+    & h1{
+        text-align: center;
+        font-variant: small-caps;
+    }
+    & .slider{
+        cursor:grab;
+
+        & :focus{
+            cursor: grabbing;
+        }
+        & .slider-box{
+            height: 65vh;
+            position: relative;
+            border-radius: 20px;
+            & .ba-img{
+                @include position(absolute, 0, 0, null, null, -1);
+                width: 100%;
+                height: 100%;
+                border-radius: 20px;
+                
+                & .img-1{
+                    border-radius: 20px;
+                }
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.5);
+                    border-radius: 20px;
+                }
+            }
+            
+            & .fr-img{
+                background: #ffffff70;
+                backdrop-filter: blur(10px);
+                position: relative;
+
+                ::-webkit-scrollbar{
+                    width: 2px;
+                }
+                & .scroll-img{
+                    overflow-y: scroll;
+
+                }
+
+                & .content{
+                    padding: 10px;
+                    text-align: center;
+                    overflow-y: scroll;
+                    & p{
+                        color: #fff;
+                        line-height: 35px;
+                        font-weight: 600;
+                    }
+                }
+
+                & .img-btn{
+                    @include position(absolute, 90%, 94%, -50%, -50%, 1);
+                    position: absolute;
+                    padding: 10px 14px;
+                    border: none;
+                    border-radius: 50%;
+                }
+            }
+        }
+        
+    }
+}

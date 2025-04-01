@@ -7,6 +7,7 @@
     padding: 5px;
     overflow: hidden;
     border-radius: map-get($border-radius, rad-px-l);
+    pointer-events: none;
 
     & .logo{
         width: 50px;
@@ -15,7 +16,7 @@
         position: relative;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.502);
         cursor: pointer;
-        background: #fff;
+        pointer-events: auto;
 
         & p{
         @include position(absolute, 50%, 50%, -50%, -50%, null);
@@ -28,8 +29,8 @@
         width: 100%;
         transform: translateY(-300%);
         transition: all 1s linear;
-        background: #fff;
         border-radius: map-get($border-radius, rad-px-l);
+        pointer-events: auto;
         
         
         &.active{

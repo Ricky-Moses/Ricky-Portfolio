@@ -16,24 +16,24 @@
     }
 }
 
-/* Width of the scrollbar */
+html, body{
+    overflow-x: hidden;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
-  }
+}
   
-/* Background of the scrollbar track */
 ::-webkit-scrollbar-track {
 background: #f1f1f1;
 border-radius: 10px;
 }
 
-/* Scrollbar thumb (the draggable part) */
 ::-webkit-scrollbar-thumb {
 background: #888;
 border-radius: 10px;
 }
 
-/* Hover effect on the thumb */
 ::-webkit-scrollbar-thumb:hover {
 background: #555;
 }

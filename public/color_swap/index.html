@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        button {
+            padding: 7px 10px;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+        div{
+            background: #ffffff;
+            padding: 7px 10px;
+            color: #000000;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn">Click Me</button>
+    <div id="colorUpdate"></div>
+</body>
+<script>
+    const btnBg = document.getElementById('btn')
+    let hexCode = ['A', 'B', 'C', 'D', 'E', 'F', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+
+    btnBg.addEventListener('click', () => {
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            let randomIndex = Math.floor(Math.random() * hexCode.length);
+            color += hexCode[randomIndex];
+        }
+
+        document.body.style.backgroundColor = color
+        document.getElementById('colorUpdate').textContent = color
+    })
+
+</script>
+
+</html>

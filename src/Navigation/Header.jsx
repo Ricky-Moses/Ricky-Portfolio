@@ -17,7 +17,7 @@ const Header = ({scrollToSection, activeSection}) => {
 
             <header className="header">
                 <div className="logo" onClick={handleToggle}>
-                    <p>{toggle ? '\u24C2\uFE0F' : '\u00AE\uFE0F'}</p>
+                    <p>{toggle ? '\u24C2\uFE0F' : '\u24C7\uFE0F'}</p>
                 </div>
                 <nav className={`menus ${toggle ? 'active' : ''}`}>
                     <ul>

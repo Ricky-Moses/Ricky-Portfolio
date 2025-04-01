@@ -1,0 +1,50 @@
+@use '../abstracts/index' as *;
+
+.about{
+    width: 98vw;
+    overflow: hidden;
+    @include grid(2, 1fr, null);
+    padding: 20px 0;
+
+    & .img-container{
+        width: 100%;
+        height: 60vh;
+        & .img{
+            width: 100%;
+            height: 100%;
+            background: url('/src/Image/Ricky_Moses_2.jpg') no-repeat;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            
+            &::before{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: url('/src/Image/Splash_4.jpg');
+                background-size: cover;
+                background-position: center;
+                mix-blend-mode:screen;
+            }
+        }
+    }
+
+    & .about-container{
+        width: 95%;
+
+        & h1{
+            font-variant: small-caps;
+        }
+        
+        & table{
+            // width: 70%;
+            
+
+            & th, td{
+                // width: 100%;
+                padding: 10px;
+            }
+        }
+    }
+}

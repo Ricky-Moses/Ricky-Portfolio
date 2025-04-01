@@ -27,6 +27,13 @@
     gap: $gap;
 }
 
+// Gird
+@mixin grid($column, $fraction, $gap){
+    display: grid;
+    grid-template-columns: repeat($column, $fraction);
+    gap: $gap;
+}
+
 // Position
 @mixin position($position, $pt, $pl, $tx, $ty, $pz){
     position: $position;

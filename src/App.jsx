@@ -89,7 +89,9 @@ const App = () => {
       <section ref={homeRef}> 
         <Home scrollToSection={scrollToSection}/> 
       </section>
-      <section ref={aboutRef}> <About /> </section>
+      <section ref={aboutRef}> 
+        <About scrollToSection={scrollToSection}/>
+      </section>
       <section ref={skillRef}> <Skill /> </section>
       <section ref={projectRef}> <Project /> </section>
       <section ref={contactRef}> <Contact /> </section>

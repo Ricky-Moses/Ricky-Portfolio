@@ -10,11 +10,14 @@
         & .logo{
             width: 115px;
             height: 65px;
+            background: #fff;
+
         }
 
         & .menus{
             transform: translateX(-300%);
             width: 100vw;
+            background: #fff;
 
             &.active{
                 transform: translateX(0);
@@ -28,7 +31,7 @@
                 & li{
 
                     &.active{
-                        height: 6vh;
+                        height: 4.5vh;
                         padding: 0 1.3em;
                     }
 
@@ -39,6 +42,20 @@
 
     // Header Animation
     @include menu-animation('horizontal');
+
+    // About
+    .about{
+        grid-template-columns: repeat(1, 1fr);
+        // & .img-container{
+        //     width: 80%;
+        // }
+    }
+
+    // Skill
+    .skill{
+        @include grid(1, 1fr, null);
+        height: 100vh;
+    }
 }
 
 @media (max-width: 768px) {
@@ -109,20 +126,35 @@
     .home{
         & .blue-ball{
 
-            & div:nth-child(1){
-                filter: opacity(10%);
-                left: 90%;
-            }
-            & div:nth-child(2){
-                filter: opacity(20%);
-                left: 80%;
-            }
-            & div:nth-child(3){
-                filter: opacity(30%);
-                left: 85%;
+            & div:nth-child(1){ filter: opacity(10%);left: 140%; }
+            & div:nth-child(2){ filter: opacity(20%);left: 135%; }
+            & div:nth-child(3){ filter: opacity(30%);left: 130%; }
+        }
+    }
+
+    // About
+    .about{
+        & .img-container{
+            height: 45vh;
+        }
+    }
+
+    // Project
+    .project{
+        & .slider{
+            & .slider-box{
+                height: 55vh;
+
+                & .fr-img{
+                    & .img-btn{
+                        @include position(absolute, 88%, 90%, -50%, -50%, 1);
+                        padding: 7px 11px;
+                    }
+                }
             }
         }
     }
+    
 }
 
 @media (max-width: 360px) {
@@ -144,6 +176,29 @@
     // Home
     .home{
         padding-top: 15px;
-        align-items:start !important;
+    }
+
+    // About
+    .about{
+        & .about-container{
+            & th, th{
+                padding: 10px 0 !important;
+            }
+        }
+    }
+
+    // Project
+    .project{
+        & .slider{
+            & .slider-box{
+
+                & .fr-img{
+                    & .img-btn{
+                        @include position(absolute, 90%, 88%, -50%, -50%, 1);
+                        padding: 5px 9px;
+                    }
+                }
+            }
+        }
     }
 }
