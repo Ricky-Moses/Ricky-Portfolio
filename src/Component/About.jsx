@@ -10,7 +10,9 @@ const About = ({scrollToSection}) => {
         </div>
         <div className="about-container px-2 h-75">
           <h1 className='border-bottom border-primary text-primary  py-2'>About Me</h1>
-          <h4 className='type-write my-3'>Hello, I'm Ricky</h4>
+          <div className='type-write'>
+            <h4 className='my-3'>Hello, I'm Ricky</h4>
+          </div>
           <p className='text-capitalize'>My journey into web development started with a curiosity to understand how websites work. From experimenting with HTML and CSS to building interactive applications with JavaScript and React, I’ve continuously challenged myself to learn and improve. Along the way, I’ve developed a strong passion for clean code, responsive design, and user experience. My goal is to create seamless digital experiences that make a difference.</p>
           <table>
             <tbody>
