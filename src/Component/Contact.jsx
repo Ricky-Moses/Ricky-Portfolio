@@ -64,7 +64,7 @@ const Contact = () => {
               <label htmlFor="floatingTextarea">Comment</label>
             </div>
             <div class="">
-              <button type="submit" class="btn bg-white fw-bold text-danger my-2">Send 📩</button>
+              <button type="submit" className="btn bg-white fw-bold text-danger my-2"><a className='text-danger' href={`https://mail.google.com/mail/?view=cm&fs=1&to=${contactLink[0].link}&su=Hello&body=I want to get in touch with you`} target='_blank' rel='noopener noreferrer'>Send 📩</a></button>
             </div>
           </form>
         </div>

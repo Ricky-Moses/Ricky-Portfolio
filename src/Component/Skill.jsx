@@ -66,7 +66,7 @@ const jsDetails = [
 const Skill = () => {
 
   const [progressBar, setProgressBar] = useState(skills.map(() => 0))
-  const [activeTab, setActiveTab] = useState('HTML')
+  const [activeTab, setActiveTab] = useState('JS')
 
   useEffect(() => {
     const interval = skills.map((skill, index) => (
@@ -75,7 +75,7 @@ const Skill = () => {
           if (prev[index] >= skill.progress) return prev;
           return prev.map((value, i) => (i === index ? Math.min(value + 1, skill.progress) : value))
         })
-      }, 50)
+      }, 80)
     ));
 
     return () => interval.forEach(clearInterval)
@@ -110,7 +110,7 @@ const Skill = () => {
         <div className="skill-details card text-center overflow-y-scroll">
           <div className="card-header sticky-top z-3">
             <ul className="nav nav-tabs card-header-tabs">
-              {['HTML', 'CSS', 'JS'].map((tab) => (
+              {['JS', 'CSS', 'HTML'].map((tab) => (
                 <li className='nav-item' key={tab}>
                   <button className={`nav-link ${activeTab === tab ? 'active' : ''}`} onClick={() => setActiveTab(tab)}>{tab}</button>
                 </li>
@@ -127,19 +127,19 @@ const Skill = () => {
                 <h4 className="card-title">{title}</h4>
                 <p className="card-text text-start">{descOne}</p>
                 <div className='border w-50 my-2'>
-                  <img className='img-fluid' src={tagImage} alt="" />
+                  <img className='img-fluid' src={tagImage} alt={tagImage} />
                 </div>
                 <p className="card-text text-start">{descTwo}</p>
                 <div className='border w-100 my-2'>
-                  <img className='img-fluid' src={nestedImage} alt="" />
+                  <img className='img-fluid' src={nestedImage} alt={nestedImage} />
                 </div>
                 <p className="card-text text-start">{descThree}</p>
                 <div className='border w-100 my-2'>
-                  <img className='img-fluid' src={formImage} alt="" />
+                  <img className='img-fluid' src={formImage} alt={formImage} />
                 </div>
                 <p className="card-text text-start">{descFour}</p>
                 <div className='border w-100 my-2'>
-                  <img className='img-fluid' src={formTagImage} alt="" />
+                  <img className='img-fluid' src={formTagImage} alt={formTagImage} />
                 </div>
                 <p className="card-text text-start"><b>{descFive} <br /> {descSix}</b></p>
                 <p className="card-text text-start"><i>{descSeven}</i></p>

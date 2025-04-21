@@ -4,18 +4,20 @@ import microsoftImg from '../Image/Microsoft.png'
 import microsoftScreen from '../Image/Microsoft_screen.png'
 import portfolioOneImg from '../Image/Portfolio-1.png'
 import portfolioScreen from '../Image/Portfolio_screen.png'
+import eCommerceScreen from '../Image/E-Commerce.png'
+import eCommerceImg from '../Image/E-Commerce.png'
 import tamilBlogImg from '../Image/Tamil_blog.png'
 import blogScreen from '../Image/Blog.png'
 import coffeeBarImg from '../Image/coffee_bar.png'
 import coffeeBarScreen from '../Image/Coffee Bar.png'
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye } from "react-icons/fa";
 
 const projectDetails = [
   { heading: 'Microsoft', img: microsoftImg, singleImg: microsoftScreen, gitLink: 'https://ricky-moses.github.io/Html-Css-Project/',content: "My first project was a Microsoft website clone built entirely using HTML and CSS. It was a great learning experience that helped me understand layout structuring, styling, and responsiveness. This project marked the beginning of my web development journey! 🚀",responsive: false },
   { heading: 'Portfolio', img: portfolioOneImg, singleImg: portfolioScreen, gitLink: 'https://ricky-moses.github.io/Portfolio-3/',content: "My second project was a personal portfolio website created using only HTML and CSS. It showcases information about me, my skills, and my work, helping me improve my design and layout skills. This project was a step forward in my web development journey! 🚀",responsive: true },
+  { heading: 'E-Commerce', img: eCommerceScreen, singleImg: eCommerceImg, gitLink: 'https://ricky-moses.github.io/E-commerceOne/',content: "I created a complete e-commerce website using only HTML, CSS, and JavaScript without any frameworks. It includes features like product listings, cart functionality, and responsive design.🚀",responsive: true },
   { heading: 'Tamil Nadu Blog', img: blogScreen, singleImg: tamilBlogImg, gitLink: 'https://ricky-moses.github.io/Simple-Blog/',content: "My third project was a website about the rich culture of Tamil Nadu, built using HTML, CSS, JavaScript, and Bootstrap. This project helped me enhance my skills in interactive design, responsiveness, and dynamic elements while showcasing the heritage of Tamil Nadu. 🚀",responsive: true },
   { heading: 'Coffee Bar', img: coffeeBarScreen, singleImg: coffeeBarImg, gitLink: 'https://ricky-moses.github.io/Coffee-Shop-React/',content: "My fourth project was a Coffee Bar website built using HTML, CSS, Bootstrap, JavaScript, React, and various React packages. This project helped me explore React components, state management, and UI libraries to create a dynamic and interactive user experience.🚀",responsive: true },
-
 ]
 
 
@@ -40,7 +42,7 @@ export default function Project() {
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 2000,
     pauseOnHover: true,
     responsive: [
