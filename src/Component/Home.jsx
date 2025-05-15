@@ -17,7 +17,7 @@ const Home = ({ scrollToSection }) => {
           <h2>HI THERE!</h2>
           <h1 className='fw-bold'>I'M <span className='text-primary '>RICKY MOSES</span></h1>
           <h6 className='py-2 px-4 text-white bg-primary'>I'M WEB DESIGNER</h6>
-          <p className='fw-bold'>Hey there! I'm Ricky Moses, a web developer who loves turning ideas into beautiful, functional websites. With expertise in HTML, CSS, JavaScript, and React, I create responsive, high-performance web experiences. Check out my projects or reach out—let’s build something great!</p>
+          <p className='fw-bold'>I’m a passionate Full Stack Web Developer who enjoys turning ideas into dynamic, user-focused web applications. With hands-on experience in frontend technologies like React and UI design, combined with backend development using Node.js, Express, and MongoDB, I build responsive, high-performance solutions from end to end.</p>
           <button className='btn btn-primary' onClick={() => scrollToSection('about')}>
             MORE ABOUT ME
           </button>
